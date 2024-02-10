@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "c034186d-de6f-4242-9afd-b7cdab01b17f",
+		"name": "Samokat_Req",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28925182"
+	},
+	"item": [
+		{
+			"name": "Создание нового курьера",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"nat\",\n    \"password\": \"1234\",\n    \"firstName\": \"Tyler\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/courier",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"courier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Логин курьера в системе",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"nat\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/courier/login",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"courier",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание заказа",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"mick\",\n    \"lastName\": \"mick\",\n    \"address\": \"kotelniki, 142 apt.\",\n    \"metroStation\": 138,\n    \"phone\": \"+7 800 555 35 35\",\n    \"rentTime\": 5,\n    \"deliveryDate\": \"2024-02-05\",\n    \"comment\": \"The first rule of the samokat sharing is - you do not talk about samokat sharing\",\n    \"color\": [\n        \"BLACK\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/orders",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отмена заказа",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Tyler\",\n    \"lastName\": \"Durden\",\n    \"address\": \"Paper str, 142 apt.\",\n    \"metroStation\": 4,\n    \"phone\": \"+7 800 555 35 35\",\n    \"rentTime\": 5,\n    \"deliveryDate\": \"2024-06-06\",\n    \"comment\": \"The first rule of the samokat sharing is - you do not talk about samokat sharing\",\n    \"color\": [\n        \"BLACK\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/orders/cancel?track=217719",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"cancel"
+					],
+					"query": [
+						{
+							"key": "track",
+							"value": "217719"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Принять заказ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/orders/accept/4?courierId=6",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"accept",
+						"4"
+					],
+					"query": [
+						{
+							"key": "courierId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказов",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/orders",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказов курьера",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/orders?courierId=6",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "courierId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказа по его номеру",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/orders/track?t=619790",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"track"
+					],
+					"query": [
+						{
+							"key": "t",
+							"value": "619790"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Поиск станции метро",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Tyler\",\n    \"lastName\": \"Durden\",\n    \"address\": \"Paper str, 142 apt.\",\n    \"metroStation\": 4,\n    \"phone\": \"+7 800 555 35 35\",\n    \"rentTime\": 5,\n    \"deliveryDate\": \"2024-06-06\",\n    \"comment\": \"The first rule of the samokat sharing is - you do not talk about samokat sharing\",\n    \"color\": [\n        \"BLACK\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/stations/search",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stations",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Поиск станции метро по названию",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Tyler\",\n    \"lastName\": \"Durden\",\n    \"address\": \"Paper str, 142 apt.\",\n    \"metroStation\": 4,\n    \"phone\": \"+7 800 555 35 35\",\n    \"rentTime\": 5,\n    \"deliveryDate\": \"2024-06-06\",\n    \"comment\": \"The first rule of the samokat sharing is - you do not talk about samokat sharing\",\n    \"color\": [\n        \"BLACK\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Sam}}/api/v1/stations/search?s=Ушакова",
+					"host": [
+						"{{Sam}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stations",
+						"search"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "Ушакова"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

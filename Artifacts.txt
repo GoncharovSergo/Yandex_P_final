@@ -1,0 +1,32 @@
+- Отчет о выполнении первой части
+https://docs.google.com/document/d/1EqHcNdJ6IBa3BPfOHPXt2FPxGQF9JpGTT8XdkNzlVyw/edit?usp=sharing
+
+
+
+- Баг-репорты. Веб приложение Яндес Самокат
+https://gonchar.youtrack.cloud/projects/78460b54-c351-44ae-ad8b-1dbaddb34ad3
+
+
+
+- Баг-репорты. Мобильное приложение Яндекс Самокат
+https://gonchar.youtrack.cloud/projects/f23aee4a-9538-4764-b455-a0050b3d264e 
+
+
+
+- MINDMAP 
+https://miro.com/app/board/uXjVMQlIJ00=/?share_link_id=908957965178
+
+
+
+- ЧЛ Регрес. тест Мобильного приложения Яндекс Самокат
+https://docs.google.com/spreadsheets/d/1lv2U7StQLxq963Js89nWwNkZXsENhOMIWyoQ1nUHHHg/edit?usp=sharing
+
+
+
+- ЧЛ проверки веб приложения Яндекс Самокат
+https://docs.google.com/spreadsheets/d/1nRmiBO3eEuVSRFGC9SJAujOwKFljoHPZPAp8Mtx82HE/edit?usp=sharing
+
+
+
+- Скриншоты и скринкасты
+https://drive.google.com/drive/folders/1RJttpfXdIJJeJylXnBEsOaOyEYAaKFqi?usp=sharing
